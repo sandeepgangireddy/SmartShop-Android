@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>Com.smartshop2</groupId>
+	<artifactId>Appium_SmartTests2</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>Appium_SmartTests2</name>
+	<description>Sainsburys Appium tests using JUnit</description>
+	<dependencies>
+		<!-- JUnit library. Check latest version at http://mvnrepository.com/artifact/io.appium/java-client -->
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.12</version>
+			<scope>test</scope>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/net.sf.opencsv/opencsv -->
+		<dependency>
+		    <groupId>net.sf.opencsv</groupId>
+		    <artifactId>opencsv</artifactId>
+		    <version>2.3</version>
+		</dependency>
+		<!-- Appium client library. Check latest version at http://mvnrepository.com/artifact/io.appium/java-client -->
+		<dependency>
+			<groupId>io.appium</groupId>
+			<artifactId>java-client</artifactId>
+			<version>3.4.1</version>
+		</dependency>
+
+		<!-- Gson library needed by other libraries. Check latest version at http://mvnrepository.com/artifact/com.google.code.gson/gson -->
+		<dependency>
+			<groupId>com.google.code.gson</groupId>
+			<artifactId>gson</artifactId>
+			<version>2.6.2</version>
+		</dependency>
+
+		<!-- Test NG library. Check latest version at http://mvnrepository.com/artifact/org.testng/testng -->
+		<dependency>
+			<groupId>org.testng</groupId>
+			<artifactId>testng</artifactId>
+			<version>6.9.10</version>
+			<scope>test</scope>
+		</dependency>
+
+		<!-- Guice: lightweight dependency injection framework needed by the surefire 
+			plugin. Check latest version at http://mvnrepository.com/artifact/com.google.inject/guice -->
+		<dependency>
+			<groupId>com.google.inject</groupId>
+			<artifactId>guice</artifactId>
+			<version>4.0</version>
+			<scope>test</scope>
+		</dependency>
+
+		<!-- ReportNG library for nicer HTML reports. Latest official version is 
+			1.1.4, there will be no future releases. See http://mvnrepository.com/artifact/org.uncommons/reportng -->
+		<dependency>
+			<groupId>org.uncommons</groupId>
+			<artifactId>reportng</artifactId>
+			<version>1.1.4</version>
+			<scope>test</scope>
+			<!-- Remove TestNG dependency to avoid clashes -->
+			<exclusions>
+				<exclusion>
+					<groupId>org.testng</groupId>
+					<artifactId>testng</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<plugins>
+		<!--  Surefire plugin. Check latest version here: http://mvnrepository.com/artifact/org.apache.maven.plugins/maven-surefire-plugin -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>2.19.1</version>
+				<configuration>
+				<!-- Set escape variable to false for reportNG  HTML Reports -->
+					<systemPropertyVariables>
+						<org.uncommons.reportng.escape-output>false</org.uncommons.reportng.escape-output>
+					</systemPropertyVariables>
+					<!-- XML with suite of test cases -->
+					<suiteXmlFiles>
+						<suiteXmlFile>testng.xml</suiteXmlFile>
+					</suiteXmlFiles>
+					<!-- Custom system properties to setup desire capabilities via maven -->
+					<systemPropertyVariables>
+						<appium_server_port>${appium_server_port}</appium_server_port>
+						<appium_server_host>${appium_server_host}</appium_server_host>
+						<implicit_timeout>${implicit_timeout}</implicit_timeout>
+						<explicit_timeout>${explicit_timeout}</explicit_timeout>
+						<platform_name>${platform_name}</platform_name>
+						<device_name>${device_name}</device_name>
+						<device_uid>${device_udid}</device_uid>
+						<app_path>${app_path}</app_path>
+						<repeat_failed_tests>${repeat_failed_tests}</repeat_failed_tests>
+					</systemPropertyVariables>
+					<!-- Properties of surefire plugin -->
+					<properties>
+						<property>
+							<name>surefire.testng.verbose</name>
+							<value>10</value>
+						</property>
+						<!-- Setting ReportNG listeners -->
+						<property>
+							<name>usedefaultlisteners</name>
+							<value>false</value>
+						</property>
+						<property>
+							<name>listener</name>
+							<!-- Use custom listener to add screenshots and steps to the reports. <value>org.uncommons.reportng.HTMLReporter, org.uncommons.reportng.JUnitXMLReporter</value> -->
+							<value>com.smartshop.appiumtests.Appium_Tests.reports.BaseHTMLReporter,
+								org.uncommons.reportng.JUnitXMLReporter</value>
+						</property>
+					</properties>
+				</configuration>
+			</plugin>
+			<!--  Maven compiler plugin -->
+			<plugin>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.1</version>
+				<configuration>
+					<source>1.7</source>
+					<target>1.7</target>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
+	<repositories>
+		<repository>
+			<id>saucelabs-repository</id>
+			<url>https://repository-saucelabs.forge.cloudbees.com/release</url>
+			<releases>
+			</releases>
+			<snapshots>
+			</snapshots>
+		</repository>
+		<repository>
+			<id>java-net</id>
+			<url>http://download.java.net/maven/2</url>
+		</repository>
+	</repositories>
+
+	<reporting>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-report-plugin</artifactId>
+				<version>2.19.1</version>
+			</plugin>
+		</plugins>
+	</reporting>
+
+</project>

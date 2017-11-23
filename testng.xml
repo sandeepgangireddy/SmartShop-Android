@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="regression" parallel="none">
+	<!-- Set listener in XML (to have reports when running the tests through 
+		Eclipse, from command-line maven is not needed) -->
+	<listeners>
+		<listener class-name="Com.smartshop2.Appium_SmartTests2.reports.BaseHTMLReporter" />
+	</listeners>
+	<!-- List of tests -->
+	<test name="login">
+		<classes>
+			<class name="Com.smartshop2.Appium_SmartTests2.tests.TestLogin" />
+			<class name="Com.smartshop2.Appium_SmartTests2.tests.TestInvalidLogin" />
+			<class name="Com.smartshop2.Appium_SmartTests2.tests.TestForgottenpassword" />
+			<class name="Com.smartshop2.Appium_SmartTests2.tests.TestMinPasswordErrorMessage" />
+		</classes>
+	</test>
+	<test name="Registration">
+		<classes>
+		<class name="Com.smartshop2.Appium_SmartTests2.tests.TestRegistration" /> 
+			<class name="Com.smartshop2.Appium_SmartTests2.tests.TestRegisterInterest" /> 
+			<class name="Com.smartshop2.Appium_SmartTests2.tests.TestAddNecterafterRegistration" />
+			<class name="Com.smartshop2.Appium_SmartTests2.tests.TestEmailAddressAlredyRegistered"/>
+		</classes>
+	</test>
+	<test name="Menu">
+		<classes>
+			<class name="Com.smartshop2.Appium_SmartTests2.tests.TestMenu" />
+			<class name="Com.smartshop2.Appium_SmartTests2.tests.TestChangePassword" />
+			<class name="Com.smartshop2.Appium_SmartTests2.tests.TestChangeStore" />
+		</classes>
+	</test>
+	<test name="ShoppingList">
+		<classes>
+			<class name="Com.smartshop2.Appium_SmartTests2.tests.TestAddList" />
+		<!--	<class name="Com.smartshop2.Appium_SmartTests2.tests.TestEmptyList" /> -->
+		<!--	<class name="Com.smartshop2.Appium_SmartTests2.tests.TestEmptyListfromThreeDots" /> -->
+		<!--	<class name="Com.smartshop2.Appium_SmartTests2.tests.TestDeleteThroughSearch" /> -->
+		<!--	<class name="Com.smartshop2.Appium_SmartTests2.tests.TestCreateShoppingList" /> -->
+		<!--	<class name="Com.smartshop2.Appium_SmartTests2.tests.TestDeletefromProductList" /> -->
+		<!--	<class name="Com.smartshop2.Appium_SmartTests2.tests.TestsearchwrongText" />-->
+		</classes>
+	</test>
+	<test name="StartShopping">
+		<classes>
+		<!--	<class name="Com.smartshop2.Appium_SmartTests2.tests.TestScanweightedItems" /> -->
+		<!--<class name="Com.smartshop2.Appium_SmartTests2.tests.TestThinkTwentyFive" /> -->
+		<!--<class name="Com.smartshop2.Appium_SmartTests2.tests.TestProductNotFound" />-->
+		<!--<class name="Com.smartshop2.Appium_SmartTests2.tests.TestRemoveItemfromShoppingBasket" />-->
+		<!--<class name="Com.smartshop2.Appium_SmartTests2.tests.TestDeletefromShopinstore" />-->
+	  <!--<class name="Com.smartshop2.Appium_SmartTests2.tests.TestAddProductsfromShopinStore" /> -->
+		</classes>
+	</test>
+</suite>
+
+

@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [regression]" parallel="none">
+  <listeners>
+    <listener class-name="Com.smartshop2.Appium_SmartTests2.reports.BaseHTMLReporter"/>
+  </listeners>
+  <test name="login(failed)" parallel="none">
+    <classes>
+      <class name="Com.smartshop2.Appium_SmartTests2.tests.TestAddList">
+        <methods>
+          <include name="setUp"/>
+          <include name="beforeSuite"/>
+        </methods>
+      </class> <!-- Com.smartshop2.Appium_SmartTests2.tests.TestAddList -->
+      <class name="Com.smartshop2.Appium_SmartTests2.tests.TestLogin">
+        <methods>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- Com.smartshop2.Appium_SmartTests2.tests.TestLogin -->
+      <class name="Com.smartshop2.Appium_SmartTests2.tests.TestRegistration">
+        <methods>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- Com.smartshop2.Appium_SmartTests2.tests.TestRegistration -->
+      <class name="Com.smartshop2.Appium_SmartTests2.tests.TestMenu">
+        <methods>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- Com.smartshop2.Appium_SmartTests2.tests.TestMenu -->
+      <class name="Com.smartshop2.Appium_SmartTests2.tests.TestMinPasswordErrorMessage">
+        <methods>
+          <include name="loginerrormessage"/>
+        </methods>
+      </class> <!-- Com.smartshop2.Appium_SmartTests2.tests.TestMinPasswordErrorMessage -->
+      <class name="Com.smartshop2.Appium_SmartTests2.tests.TestRegisterInterest">
+        <methods>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- Com.smartshop2.Appium_SmartTests2.tests.TestRegisterInterest -->
+      <class name="Com.smartshop2.Appium_SmartTests2.tests.TestInvalidLogin">
+        <methods>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- Com.smartshop2.Appium_SmartTests2.tests.TestInvalidLogin -->
+      <class name="Com.smartshop2.Appium_SmartTests2.tests.TestForgottenpassword">
+        <methods>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- Com.smartshop2.Appium_SmartTests2.tests.TestForgottenpassword -->
+    </classes>
+  </test> <!-- login(failed) -->
+  <test name="Registration(failed)" parallel="none">
+    <classes>
+      <class name="Com.smartshop2.Appium_SmartTests2.tests.TestAddList">
+        <methods>
+          <include name="setUp"/>
+          <include name="beforeSuite"/>
+        </methods>
+      </class> <!-- Com.smartshop2.Appium_SmartTests2.tests.TestAddList -->
+      <class name="Com.smartshop2.Appium_SmartTests2.tests.TestLogin">
+        <methods>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- Com.smartshop2.Appium_SmartTests2.tests.TestLogin -->
+      <class name="Com.smartshop2.Appium_SmartTests2.tests.TestRegistration">
+        <methods>
+          <include name="testswipe"/>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- Com.smartshop2.Appium_SmartTests2.tests.TestRegistration -->
+      <class name="Com.smartshop2.Appium_SmartTests2.tests.TestAddNecterafterRegistration">
+        <methods>
+          <include name="necterafterRegistration"/>
+        </methods>
+      </class> <!-- Com.smartshop2.Appium_SmartTests2.tests.TestAddNecterafterRegistration -->
+      <class name="Com.smartshop2.Appium_SmartTests2.tests.TestMenu">
+        <methods>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- Com.smartshop2.Appium_SmartTests2.tests.TestMenu -->
+      <class name="Com.smartshop2.Appium_SmartTests2.tests.TestRegisterInterest">
+        <methods>
+          <include name="setUp"/>
+          <include name="registerinterest"/>
+        </methods>
+      </class> <!-- Com.smartshop2.Appium_SmartTests2.tests.TestRegisterInterest -->
+      <class name="Com.smartshop2.Appium_SmartTests2.tests.TestInvalidLogin">
+        <methods>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- Com.smartshop2.Appium_SmartTests2.tests.TestInvalidLogin -->
+      <class name="Com.smartshop2.Appium_SmartTests2.tests.TestForgottenpassword">
+        <methods>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- Com.smartshop2.Appium_SmartTests2.tests.TestForgottenpassword -->
+      <class name="Com.smartshop2.Appium_SmartTests2.tests.TestEmailAddressAlredyRegistered">
+        <methods>
+          <include name="emailaddressalreadyregistered"/>
+        </methods>
+      </class> <!-- Com.smartshop2.Appium_SmartTests2.tests.TestEmailAddressAlredyRegistered -->
+    </classes>
+  </test> <!-- Registration(failed) -->
+  <test name="Menu(failed)" parallel="none">
+    <classes>
+      <class name="Com.smartshop2.Appium_SmartTests2.tests.TestAddList">
+        <methods>
+          <include name="setUp"/>
+          <include name="beforeSuite"/>
+        </methods>
+      </class> <!-- Com.smartshop2.Appium_SmartTests2.tests.TestAddList -->
+      <class name="Com.smartshop2.Appium_SmartTests2.tests.TestLogin">
+        <methods>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- Com.smartshop2.Appium_SmartTests2.tests.TestLogin -->
+      <class name="Com.smartshop2.Appium_SmartTests2.tests.TestRegistration">
+        <methods>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- Com.smartshop2.Appium_SmartTests2.tests.TestRegistration -->
+      <class name="Com.smartshop2.Appium_SmartTests2.tests.TestMenu">
+        <methods>
+          <include name="menu"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- Com.smartshop2.Appium_SmartTests2.tests.TestMenu -->
+      <class name="Com.smartshop2.Appium_SmartTests2.tests.TestRegisterInterest">
+        <methods>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- Com.smartshop2.Appium_SmartTests2.tests.TestRegisterInterest -->
+      <class name="Com.smartshop2.Appium_SmartTests2.tests.TestChangePassword">
+        <methods>
+          <include name="changepassword"/>
+        </methods>
+      </class> <!-- Com.smartshop2.Appium_SmartTests2.tests.TestChangePassword -->
+      <class name="Com.smartshop2.Appium_SmartTests2.tests.TestChangeStore">
+        <methods>
+          <include name="changestore"/>
+        </methods>
+      </class> <!-- Com.smartshop2.Appium_SmartTests2.tests.TestChangeStore -->
+      <class name="Com.smartshop2.Appium_SmartTests2.tests.TestInvalidLogin">
+        <methods>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- Com.smartshop2.Appium_SmartTests2.tests.TestInvalidLogin -->
+      <class name="Com.smartshop2.Appium_SmartTests2.tests.TestForgottenpassword">
+        <methods>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- Com.smartshop2.Appium_SmartTests2.tests.TestForgottenpassword -->
+    </classes>
+  </test> <!-- Menu(failed) -->
+  <test name="ShoppingList(failed)" parallel="none">
+    <classes>
+      <class name="Com.smartshop2.Appium_SmartTests2.tests.TestAddList">
+        <methods>
+          <include name="addlist"/>
+          <include name="setUp"/>
+          <include name="beforeSuite"/>
+        </methods>
+      </class> <!-- Com.smartshop2.Appium_SmartTests2.tests.TestAddList -->
+      <class name="Com.smartshop2.Appium_SmartTests2.tests.TestLogin">
+        <methods>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- Com.smartshop2.Appium_SmartTests2.tests.TestLogin -->
+      <class name="Com.smartshop2.Appium_SmartTests2.tests.TestRegistration">
+        <methods>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- Com.smartshop2.Appium_SmartTests2.tests.TestRegistration -->
+      <class name="Com.smartshop2.Appium_SmartTests2.tests.TestMenu">
+        <methods>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- Com.smartshop2.Appium_SmartTests2.tests.TestMenu -->
+      <class name="Com.smartshop2.Appium_SmartTests2.tests.TestRegisterInterest">
+        <methods>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- Com.smartshop2.Appium_SmartTests2.tests.TestRegisterInterest -->
+      <class name="Com.smartshop2.Appium_SmartTests2.tests.TestInvalidLogin">
+        <methods>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- Com.smartshop2.Appium_SmartTests2.tests.TestInvalidLogin -->
+      <class name="Com.smartshop2.Appium_SmartTests2.tests.TestForgottenpassword">
+        <methods>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- Com.smartshop2.Appium_SmartTests2.tests.TestForgottenpassword -->
+    </classes>
+  </test> <!-- ShoppingList(failed) -->
+</suite> <!-- Failed suite [regression] -->
