@@ -42,5 +42,7 @@ public class ADBBarcodeClient {
         } catch (IOException e) {
             e.printStackTrace();
         }
+        
+        
     }
 }
